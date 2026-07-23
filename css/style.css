@@ -1,0 +1,163 @@
+/*
+======== Reset ========
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button, input, textarea {
+    font: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*
+======== CSS 변수 ========
+*/
+
+:root {
+    --color-primary: #FFD463;
+
+    --color-bg: #ffffff;
+    --color-surface: #f5f5f5;
+
+    --color-text: #222222;
+    --color-text-light: #666666;
+
+    --color-border: #dddddd;
+
+    --shadow: 0 4px 12px rgba(0,0,0,.08);
+    --radius: 12px;
+    --transition: .3s ease;
+    --container: 1200px;
+}
+
+/*
+======== Dark Theme 변수 ========
+*/
+
+[data-theme="dark"] {
+    --color-bg: #181818;
+    --color-surface: #252525;
+    --color-text: #ffffff;
+    --color-text-light: #bbbbbb;
+    --color-border: #444444;
+}
+
+/*
+======== Body ========
+*/
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+
+    font-family: Pretendard, sans-serif;
+    line-height: 1.6;
+    transition: 
+        background .3s,
+        color .3s;
+}
+
+/*
+======== 공통 Container ========
+*/
+
+.container {
+    width: min(90%, var(--container));
+    margin: auto;
+}
+
+/*
+======== Section 공통 ========
+*/
+
+section {
+    padding: 100px 0;
+}
+
+/*
+======== Title ========
+*/
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+/*
+======== Button ========
+*/
+
+.btn {
+    display: inline-block;
+    padding: .8rem 1.5rem;
+    background: var(--color-primary);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/*
+======== Header ========
+*/
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 1000;
+}
+
+/*
+======== nav ========
+*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/*
+======== Hero ========
+*/
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/*
+======== Projects ========
+*/

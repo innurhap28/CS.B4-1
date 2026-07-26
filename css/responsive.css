@@ -5,3 +5,17 @@
 @media (min-width:1024px){
 
 }
+
+@media (max-width:767px){
+
+    .nav-menu{
+
+        display:none;
+    }
+
+    #menu-toggle{
+
+        display:block;
+    }
+
+}

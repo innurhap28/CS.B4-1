@@ -150,12 +150,17 @@ nav {
     font-weight: bold;
 }
 
-.nav_menu a {
+.nav-menu a {
     transition: var(--transition);
 }
 
-.nav_menu a:hover {
+.nav-menu a:hover {
     color: var(--color-primary)
+}
+
+.nav-menu a.active {
+    color: var(--color-primary);
+    font-weight: bold;
 }
 
 .nav-buttons {
@@ -208,4 +213,19 @@ nav {
 .project-card p {
     margin-bottom: 1rem;
     color: var(--color-text-light)
+}
+
+/*
+======== Common ========
+*/
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }

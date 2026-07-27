@@ -16,6 +16,10 @@ export function initContact() {
             alert("올바른 이메일 형식을 입력하세요.");
             return;
         }
+        if (isEmpty(messageInput.value)) {
+            alert("내용을 입력하세요.")
+            return;
+        }
         alert("전송되었습니다.");
         form.reset();
     })

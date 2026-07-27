@@ -1,6 +1,4 @@
-/*
-======== Reset ========
-*/
+/*======== Reset ========*/
 
 * {
     margin: 0;
@@ -30,20 +28,18 @@ a {
     color: inherit;
 }
 
-/*
-======== CSS 변수 ========
-*/
+/*======== CSS variables ========*/
 
 :root {
     --color-primary: #FFD463;
 
-    --color-bg: #ffffff;
-    --color-surface: #f5f5f5;
+    --color-bg: #FFFFEC;
+    --color-surface: #F1E4C3;
 
-    --color-text: #222222;
-    --color-text-light: #666666;
+    --color-text: #C6A969;
+    --color-text-light: #605B51;
 
-    --color-border: #dddddd;
+    --color-border: #F1E4C3;
 
     --shadow: 0 4px 12px rgba(0,0,0,.08);
     --radius: 12px;
@@ -51,21 +47,15 @@ a {
     --container: 1200px;
 }
 
-/*
-======== Dark Theme 변수 ========
-*/
-
 [data-theme="dark"] {
-    --color-bg: #181818;
-    --color-surface: #252525;
-    --color-text: #ffffff;
-    --color-text-light: #bbbbbb;
-    --color-border: #444444;
+    --color-bg: #57564F;
+    --color-surface: #7A7A73;
+    --color-text: #DDDAD0;
+    --color-text-light: #F8F3CE;
+    --color-border: #7A7A73;
 }
 
-/*
-======== Body ========
-*/
+/*======== Base Styles ========*/
 
 body {
     background: var(--color-bg);
@@ -78,39 +68,26 @@ body {
         color .3s;
 }
 
-/*
-======== 공통 Container ========
-*/
-
 .container {
     width: min(90%, var(--container));
     margin: auto;
 }
 
-/*
-======== Section 공통 ========
-*/
-
 section {
     padding: 100px 0;
 }
-
-/*
-======== Title ========
-*/
 
 h1 {
     font-size: 3rem;
 }
 
 h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     font-size: 2rem;
+    text-align: center;
 }
 
-/*
-======== Button ========
-*/
+/*======== Components ========*/
 
 .btn {
     display: inline-block;
@@ -118,15 +95,37 @@ h2 {
     background: var(--color-primary);
     border-radius: var(--radius);
     transition: var(--transition);
+    color: var(--color-bg);
+    cursor: pointer;
 }
 
 .btn:hover {
     transform: translateY(-2px);
 }
 
-/*
-======== Header ========
-*/
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 2s ease;
+}
+
+/*======== Header ========*/
 
 header {
     position: fixed;
@@ -179,9 +178,7 @@ nav {
     display: none;
 }
 
-/*
-======== Hero ========
-*/
+/*======== Hero ========*/
 
 #hero {
     min-height: 100vh;
@@ -189,9 +186,45 @@ nav {
     align-items: center;
 }
 
-/*
-======== Projects ========
-*/
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#hero-button, #hero-description {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 17pt;
+    margin-top: 2%;
+}
+
+/*======== About ========*/
+
+.about-image {
+    width: 250px;
+    height: 250px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: var(--shadow);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/*======== Projects ========*/
 
 #project-list {
     display: grid;
@@ -215,17 +248,59 @@ nav {
     color: var(--color-text-light)
 }
 
-/*
-======== Common ========
-*/
+/*======== Contact ========*/
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity .6s ease, transform .6s ease;
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
+#contact-form label {
+    font-weight: 600;
+    margin-bottom: -.5rem;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: .25s;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow);
+}
+
+#contact-form textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+#contact-form button {
+    align-self: center;
+    padding: 14px 32px;
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border: none;
+    cursor: pointer;
+}
+
+#contact {
+    padding: 6rem 0;
+}
+
+/*======== Footer ========*/
+.copyright {
+    text-align: center;
+    padding-bottom: 150px;
 }

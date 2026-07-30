@@ -28,6 +28,10 @@ a {
     color: inherit;
 }
 
+html, body {
+    min-width: 360px;
+}
+
 /*======== CSS variables ========*/
 
 :root {
@@ -97,10 +101,29 @@ h2 {
     transition: var(--transition);
     color: var(--color-bg);
     cursor: pointer;
+    overflow: hidden;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn:hover .text {
+    animation: slot .3s;
+}
+
+@keyframes slot {
+    0% {
+        transform: translateY(-150%);
+    }
+    50% {
+        transform: translateY(20%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+
 }
 
 .fade-in {
@@ -235,6 +258,7 @@ nav {
 .project-card {
     padding: 1.5rem;
     background: var(--color-surface);
+    border: 2px solid var(--color-surface);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
@@ -246,6 +270,10 @@ nav {
 .project-card p {
     margin-bottom: 1rem;
     color: var(--color-text-light)
+}
+
+.project-card:hover {
+    border-color: var(--color-primary);
 }
 
 /*======== Contact ========*/
@@ -267,11 +295,10 @@ nav {
     width: 100%;
     padding: 14px 16px;
     border: 2px solid var(--color-border);
-    border-radius: 12px;
+    border-radius: var(--radius);
     background: var(--color-surface);
     color: var(--color-text);
     font-size: 1rem;
-    transition: .25s;
 }
 
 #contact-form input:focus, #contact-form textarea:focus {

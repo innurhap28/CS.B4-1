@@ -24,3 +24,5 @@ export function initContact() {
         form.reset();
     })
 }
+
+// 팝업 창 말고 인풋 칸 주변에 에러 메시지 뜨는 걸로 수정하기

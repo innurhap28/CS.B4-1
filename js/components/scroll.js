@@ -36,3 +36,18 @@ export function initScroll() {
         observer.observe(section);
     });
 }
+
+export function scrollTop() {
+    const scrollTopBtn = document.querySelector("#scroll-top");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add("show");
+        } else {
+            scrollTopBtn.classList.remove("show");
+        }
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({top: 0, behavior: "smooth"});
+    });
+}

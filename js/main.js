@@ -4,6 +4,7 @@ import { initProjects } from "./components/projects.js";
 import { initContact } from "./components/contact.js";
 import { initScroll } from "./components/scroll.js";
 import { initTyping } from "./components/typing.js";
+import { scrollTop } from "./components/scroll.js";
 
 initNavbar();
 initDarkMode();
@@ -11,3 +12,4 @@ initProjects();
 initContact();
 initScroll();
 initTyping();
+scrollTop();

@@ -10,13 +10,23 @@ export function initDarkMode() {
         if (prefersDark) {document.documentElement.dataset.theme = "dark"};
     }
     
+    function updateThemeIcon(currentTheme) {
+        if (currentTheme === "dark") {
+            themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        } else {
+            themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        }
+    }
+
     themeToggle.addEventListener("click", () => {
         const currentTheme = document.documentElement.dataset.theme;
         if (currentTheme === "dark") {
             document.documentElement.dataset.theme = "light";
+            updateThemeIcon("light");
             saveTheme("light");
         } else {
             document.documentElement.dataset.theme = "dark";
+            updateThemeIcon("dark");
             saveTheme("dark");
         }
     });

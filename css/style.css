@@ -270,8 +270,7 @@ nav {
     height: 30px;
     border-radius: 50%;
     background: var(--color-surface);
-    border-color: var(--color-text-light);
-    color: var(--color-text-light);
+    /*color: var(--color-text-light);*/
 }
 
 #menu-toggle {
@@ -309,10 +308,17 @@ nav {
 
 /*======== About ========*/
 
+.about {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-inline: 3rem;
+}
+
 .about-image {
-    width: 250px;
-    height: 250px;
-    aspect-ratio: 1;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
@@ -325,6 +331,22 @@ nav {
     object-fit: cover;
     object-position: center;
     display: block;
+}
+
+.about-body p {
+    font-size: larger;
+    color: var(--color-text-light);    
+}
+
+.about-list {
+    display: grid;
+    color: var(--color-text);
+    margin: 1rem;
+    gap: .3rem;
+}
+
+.about-list i {
+    color: var(--color-primary);
 }
 
 /*======== Skills ========*/

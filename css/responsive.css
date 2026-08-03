@@ -32,4 +32,10 @@
         color: var(--color-primary);
     }
 
+    .about {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
 }

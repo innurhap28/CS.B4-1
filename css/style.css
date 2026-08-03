@@ -185,7 +185,7 @@ h2 {
 }
 
 #scroll-top:hover .arrow-up {
-    animation: rotation .4s;
+    animation: rotation .3s;
 }
 
 @keyframes rotation {
@@ -335,13 +335,14 @@ nav {
 
 .about-body p {
     font-size: larger;
-    color: var(--color-text-light);    
+    color: var(--color-text-light);
+    margin-left: 3rem;
 }
 
 .about-list {
     display: grid;
     color: var(--color-text);
-    margin: 1rem;
+    margin: 1rem 4rem;
     gap: .3rem;
 }
 
@@ -353,7 +354,7 @@ nav {
 
 .skill-list {
     display: grid;
-    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1.5rem;
 }
 
@@ -456,8 +457,8 @@ nav {
 .error-message {
     display: block;
     min-height: 18px;
-    margin-top: 4px;
-    color: (var(--color-error));
+    margin-top: -10px;
+    color: var(--color-error);
     font-size: .85rem;
 }
 
@@ -468,5 +469,15 @@ nav {
 /*======== Footer ========*/
 .copyright {
     text-align: center;
-    padding-bottom: 150px;
+    display: block;
+    border-top: 3px solid var(--color-border);
+    padding-top: 50px;
+
+}
+
+.footer-social {
+    text-align: center;
+    font-size: 200%;
+    margin: 30px;
+    padding-bottom: 100px;
 }

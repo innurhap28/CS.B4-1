@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>김시현 | Portfolio</title>
 
-    <script>
+    <script>    // reload 시 Dark 테마로 불러올 경우, Light 테마가 등장하지 않도록
         const savedTheme = localStorage.getItem("theme");
         if (savedTheme) {
             document.documentElement.dataset.theme = savedTheme;
@@ -36,7 +35,6 @@
                 </ul>
 
                 <div class="nav-buttons">
-                    
                     <button id="theme-toggle" aria-label="Toggle to Dark theme">
                         <i class="fa-solid fa-moon"></i>
                     </button>
@@ -44,7 +42,6 @@
                     <button id="menu-toggle" aria-label="Open Menu">
                         <i class="fa-solid fa-bars"></i>
                     </button>
-
                 </div>
 
             </nav>
@@ -55,7 +52,6 @@
 
     <main>
         <section id="hero">
-
             <div class="container">
 
                 <h1 class="ternimal">
@@ -65,11 +61,9 @@
                 </h1>
 
                 <p id="start-message">Click or Press Enter to Start</p>
-
                 <p id="hero-description" class="hidden">
                     instruductions..
                 </p>
-
                 <a href="#projects" class="btn hidden" id="hero-button">
                     <span class="text">
                         <span>See Projects..</span>
@@ -77,11 +71,11 @@
                 </a>
 
             </div>
-
         </section>
         
         <section id="about" class="fade-in">
             <div class="container">
+
                 <h2>ABOUT ME</h2>
                 <article class="about">
                     <div class="about-image">
@@ -102,26 +96,20 @@
                         </ul>
                     </div>
                 </article>
+
             </div>
         </section>
 
         <section id="skills" class="fade-in">
-
             <div class="container">
-
                 <h2>SKILLS</h2>
-
                 <ul class="skill-list">
-
                     <li class="skill-card">HTML</li>
                     <li class="skill-card">CSS</li>
                     <li class="skill-card">JavaScript</li>
                     <li class="skill-card">Python</li>
-
                 </ul>
-
             </div>
-
         </section>
 
         <section id="projects" class="fade-in">
@@ -136,9 +124,7 @@
         <section id="contact" class="fade-in">
 
             <div class="container">
-
                 <h2>CONTACT ME</h2>
-
                 <form id="contact-form">
 
                     <label for="name">이름</label>
@@ -158,11 +144,9 @@
                             <span>SUBMIT</span>
                         </span>
                     </button>
-
                 </form>
-
             </div>
-
+            
         </section>
 
     </main>

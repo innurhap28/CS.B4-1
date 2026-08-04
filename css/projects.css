@@ -43,5 +43,5 @@
 }
 
 #loading {
-    animation: rotation .3s infinite;
+    animation: rotation 1s infinite;
 }

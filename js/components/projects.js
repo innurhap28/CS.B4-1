@@ -26,6 +26,7 @@ export async function initProjects() {
         }
 
         projectList.innerHTML = repositories.map(createProjectCard).join("");
+
     } catch (error) {
         projectList.innerHTML = `
             <div id="project-list-load">

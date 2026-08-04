@@ -3,11 +3,15 @@ import { saveTheme, loadTheme } from "../storage.js";
 export function initDarkMode() {
     const themeToggle = document.querySelector("#theme-toggle");
     const savedTheme = loadTheme();
+
     if (savedTheme) {
         document.documentElement.dataset.theme = savedTheme;
+        updateThemeIcon(savedTheme);
     } else {
         const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (prefersDark) {document.documentElement.dataset.theme = "dark"};
+        const theme = prefersDark ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+        updateThemeIcon(theme);
     }
     
     function updateThemeIcon(currentTheme) {
@@ -34,6 +38,8 @@ export function initDarkMode() {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     mediaQuery.addEventListener("change", (e) => {
         if (localStorage.getItem("theme")) return;
-        document.documentElement.dataset.theme = e.matches ? "dark" : "light";
+        const theme = e.matches ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+        updateThemeIcon(theme);
     })
 }

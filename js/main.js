@@ -13,3 +13,10 @@ initContact();
 initScroll();
 initTyping();
 scrollTop();
+
+
+// 엥? 한 번 이걸 넣어봤더니 스크롤 복귀가 문제없이 된다?!
+const restoreHistory = () => {
+    setTimeout(() => {
+    }, 0);
+}

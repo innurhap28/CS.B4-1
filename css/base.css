@@ -1,0 +1,65 @@
+/*======== Reset ========*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button, input, textarea {
+    font: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html, body {
+    min-width: 360px;
+}
+
+/*======== Base Styles ========*/
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+
+    font-family: Pretendard, sans-serif;
+    line-height: 1.6;
+    transition: 
+        background .3s,
+        color .3s;
+}
+
+.container {
+    width: min(90%, var(--container));
+    margin: auto;
+}
+
+section {
+    padding: 100px 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    text-align: center;
+}

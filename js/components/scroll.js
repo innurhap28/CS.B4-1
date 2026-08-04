@@ -2,12 +2,13 @@ export function initScroll() {
     const sections = document.querySelectorAll("main section");
     const navLinks = document.querySelectorAll(".nav-menu a");
     window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
         let currentSection = "";
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
             if (
-                window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight
+                scrollPosition >= sectionTop && scrollPosition < sectionBottom
             ) {
                 currentSection = section.id;
             }

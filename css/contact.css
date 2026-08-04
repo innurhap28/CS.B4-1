@@ -1,0 +1,61 @@
+/*======== Contact ========*/
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#contact-form label {
+    font-weight: 600;
+    margin-bottom: -.5rem;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow);
+}
+
+#contact-form textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+#contact-form button {
+    align-self: center;
+    padding: 14px 32px;
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border: none;
+    cursor: pointer;
+}
+
+#contact {
+    padding: 6rem 0;
+}
+
+.error-message {
+    display: block;
+    min-height: 18px;
+    margin-top: -10px;
+    color: var(--color-error);
+    font-size: .85rem;
+}
+
+.error {
+    border: 2px solid var(--color-error);
+}

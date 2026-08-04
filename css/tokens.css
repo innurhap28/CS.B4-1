@@ -1,0 +1,28 @@
+/*======== CSS variables ========*/
+
+:root {
+    --color-primary: #FFD463;
+
+    --color-bg: #FFFFEC;
+    --color-surface: #F1E4C3;
+
+    --color-text: #C6A969;
+    --color-text-light: #605B51;
+
+    --color-border: #F1E4C3;
+
+    --color-error: #ff5656;
+
+    --shadow: 0 4px 12px rgba(0,0,0,.08);
+    --radius: 12px;
+    --transition: .3s ease;
+    --container: 1200px;
+}
+
+[data-theme="dark"] {
+    --color-bg: #57564F;
+    --color-surface: #7A7A73;
+    --color-text: #DDDAD0;
+    --color-text-light: #F8F3CE;
+    --color-border: #7A7A73;
+}

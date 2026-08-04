@@ -1,0 +1,19 @@
+/*======== Hero ========*/
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+#hero-button, #hero-description {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 17pt;
+    margin-top: 2%;
+}

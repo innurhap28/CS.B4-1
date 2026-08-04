@@ -23,7 +23,7 @@ export function initTyping() {
         }
         type();
     }
-    window.addEventListener("click", startTyping);
+    window.addEventListener("pointerdown", startTyping);
     window.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
             startTyping();

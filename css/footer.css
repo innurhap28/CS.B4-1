@@ -1,0 +1,15 @@
+/*======== Footer ========*/
+.copyright {
+    text-align: center;
+    display: block;
+    border-top: 3px solid var(--color-border);
+    padding-top: 50px;
+
+}
+
+.footer-social {
+    text-align: center;
+    font-size: 200%;
+    margin: 20px;
+    padding-bottom: 100px;
+}

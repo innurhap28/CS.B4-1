@@ -38,4 +38,14 @@
         text-align: center;
     }
 
+    .about-body p {
+        text-align: left;
+        margin: 1rem;
+    }
+
+    .about-list {
+        text-align: left;
+        margin: 2rem;
+    }
+
 }

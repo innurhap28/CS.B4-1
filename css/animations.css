@@ -1,0 +1,39 @@
+@keyframes slot {
+    0% {
+        transform: translateY(-150%);
+    }
+    50% {
+        transform: translateY(20%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(45deg);
+    }
+    20% {
+        transform: rotate(135deg);
+    }
+    38% {
+        transform: rotate(225deg);
+    }
+    54% {
+        transform: rotate(315deg);
+    }
+    70% {
+        transform: rotate(450deg);
+    }
+    100% {
+        transform: rotate(405deg);
+    }
+
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

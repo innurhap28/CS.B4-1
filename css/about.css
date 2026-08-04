@@ -1,0 +1,43 @@
+/*======== About ========*/
+
+.about {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-inline: 3rem;
+}
+
+.about-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: var(--shadow);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.about-body p {
+    font-size: larger;
+    color: var(--color-text-light);
+    margin-left: 3rem;
+}
+
+.about-list {
+    display: grid;
+    color: var(--color-text);
+    margin: 1rem 4rem;
+    gap: .3rem;
+}
+
+.about-list i {
+    color: var(--color-primary);
+}
